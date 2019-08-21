@@ -1,0 +1,99 @@
+Step 1:
+Open Git Basch or command or right click on the folder and click GitBash.
+
+Step2: For Creating the files inside folder
+ICH@DESKTOP-K82LPT5 MINGW64 ~/Desktop/Hussain
+$ touch index.html
+
+ICH@DESKTOP-K82LPT5 MINGW64 ~/Desktop/Hussain
+$ touch app.js
+
+
+
+Step 3: Will initialize empty repository inside this folder
+ICH@DESKTOP-K82LPT5 MINGW64 ~/Desktop/Hussain
+$ git init
+Initialized empty Git repository in C:/Users/ICH/Desktop/Hussain/.git/
+
+
+Step 4: For Adding the name and email of Git Account
+
+ICH@DESKTOP-K82LPT5 MINGW64 ~/Desktop/Hussain (master)
+$ git config --global  user.email 'qadirabdul20@yahoo.com'
+
+
+Step 5 Adding the file to the Staging Area, but this will add only the html file
+ICH@DESKTOP-K82LPT5 MINGW64 ~/Desktop/Hussain (master)
+$ git add index.html
+
+
+Step 6 Removing the files from Staging area.
+
+$ git rm --cached index.html
+
+
+Step 8: Adding everything to the staging area: 
+ICH@DESKTOP-K82LPT5 MINGW64 ~/Desktop/Hussain (master)
+$  git add .
+
+
+Step 9: Adding specific types of files to staging area
+$ git add *.html
+
+
+Step 10: For Commit(Note this command will open a new window where we can write text
+For the commit) => after add commit message press “Escape” and then “wq:”
+
+Git commit 
+
+Step 11: For ignoring files if we don’t want to add some files or we don’t want to include in our repository (.gitignore)
+Note: With touch command we made a .gitignore file and inside this if we wrote any file name it wont be added to the repository. For example (log.txt) we wrote inside gitignore it won’t be added to the system. For folder (/dir)=> need to write inside gitignore
+
+$touch .gitignore 
+
+Step 12: Creating Branch : This will create a new branch which won’t be visible to other branch, if we want to assign a person only login part he will only see whatever he is doing in this branch, but it won’t be commit in master branch even if he commits.
+
+Git branch login 
+
+
+
+Step 13: Commit through command with text
+
+$ git commit -m ‘another change’
+
+
+
+Step 14: Switching to other branch
+
+$ git checkout login
+
+
+Step 15: Merge will join two branches and then both will be visible to each other
+
+$ git merge login
+
+
+Step 16: For pushing the project to Repository 
+
+1: First create a rep in git and from the website page inside your new repo copy the following commands
+
+ICH@DESKTOP-K82LPT5 MINGW64 ~/Desktop/Hussain (master)
+$ git remote
+
+2: $ git remote add origin https://github.com/abdulqadirtr/Test1GitBash.git
+
+3 $git remote
+
+
+
+Step 15(Last Step )(This will push all the stages file to repo)
+
+$ git push -u origin master
+
+
+Step 15: Checking the staging files if it’s green it’s staged if it’s red it’s not 
+
+ICH@DESKTOP-K82LPT5 MINGW64 ~/Desktop/Hussain (master)
+$ git status
+On branch master
+
